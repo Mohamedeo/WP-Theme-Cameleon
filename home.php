@@ -1,6 +1,20 @@
 <?php
 get_header() ?>
 
+    <main>
+            <!-- emmet: (section#presentation>h2+p)+(section#highlight>h2+img) -->
+            <section id="presentation">
+                <h2>Trop de caméléons? nope.</h2>
+                <p>Ici nous pensons qu'il n'y aura jamais trop de caméléons. Les caméléons, c'est mignon. Les caméléons, c'est pas con. Les
+                caméléons, ça sent le bonbon. il est <a href="https://fr.wikipedia.org/wiki/Les_Cam%C3%A9l%C3%A9ons">prouvé scientifiquement</a>
+                que regarder les caméléons tous les jours améliore la productivité et diminue le stress. Essayez !</p>
+            </section>
+            <section id="highlight">
+                <h2>Le caméléon de la semaine &#9825;</h2>
+                <img src="<?= get_template_directory_uri() ?>/images/cameleon-big.jpg" alt="Caméléon de la semaine">
+            </section>
+
+
 
 <div class="container">
   <div class="row">
@@ -50,18 +64,7 @@ endif;
     </div>
   </div>
 
-  <div class="container">
-  <div class="row">
-    <div class="col">
-      1 of 2
-    </div>
-    <div class="col">
-      2 of 2
-    </div>
-  </div>
-
-       
-              </div>
+ 
                     </div>
 
         <?php
