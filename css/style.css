@@ -1,0 +1,266 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #2f3848;
+}
+
+a {
+  color: yellowgreen;
+}
+
+p {
+  color: white;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  background-color: #f05768;
+  border-bottom: 3px solid lightgrey;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  padding: 0.625rem 0 1.25rem;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 1.2rem 0;
+  color: #09c;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+h3 {
+  color: #0cf;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3;
+  border-bottom: 2px solid #0cf;
+  padding-bottom: 1rem;
+}
+
+nav {
+  margin: 0.625rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* > signifie enfant direct */
+nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav > ul.menu > li {
+  margin-right: 1rem;
+}
+
+nav > ul.menu > li > a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav > .social-networks > li {
+  margin-left: 0.625rem;
+}
+
+.social-networks img {
+  height: 1.5rem;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.social-networks img:hover {
+  -webkit-transform: scale(2) rotate(360deg);
+  transform: scale(2) rotate(360deg);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#highlight {
+  position: relative;
+  margin: 1.2em 0;
+}
+
+#highlight h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f05768;
+  padding: 0.5rem;
+  margin: 0;
+  z-index: 200;
+  color: white;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+#highlight img {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+#highlight img:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#gallery {
+  width: 70%;
+  padding-right: 2.5rem;
+
+  /* "hack" des familles permettant de supprimer les espaces entre les images */
+  font-size: 0;
+}
+
+#gallery img {
+  /* comme il y a une marge, on calcule la largeur moins la marge */
+  width: calc(25% - 0.625rem);
+  margin: 0 0.625rem 0.625rem 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#gallery img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#gallery img:first-child {
+  width: calc(50% - 0.625rem);
+  float: left;
+}
+
+/* intru (iguane) */
+#gallery img:nth-child(15) {
+  border: 5px solid red;
+}
+
+aside {
+  width: 100%;
+  background-color: #048;
+  padding: 1.5rem;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+aside p {
+  color: yellowgreen;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 1.125rem 0 2rem;
+}
+
+aside p:last-child {
+  margin-bottom: 0;
+}
+
+/* footer */
+footer {
+  padding: 1.25rem;
+  margin-top: 5rem;
+}
+
+footer p {
+  color: #60b9ce;
+  text-align: center;
+}
+
+/* Fioritures : le coeur qui bat */
+.heart-beat {
+  font-size: 1.2em;
+
+  /* animation */
+  -webkit-animation-name: heartbeat;
+  animation-name: heartbeat;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* je crée l'animation */
+@-webkit-keyframes heartbeat {
+  from {
+    /* transparent */
+    opacity: 0;
+  }
+
+  to {
+    /* opaque */
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    /* transparent */
+    opacity: 0;
+  }
+
+  to {
+    /* opaque */
+    opacity: 1;
+  }
+}
+
+/* breakpoint à 768px => en dessous de 768px, on active les styles suivants */
+@media (max-width: 768px) {
+  #gallery img:first-child {
+    width: calc(25% - 0.625rem);
+    float: none;
+  }
+
+  body {
+    background-color: green;
+  }
+
+  aside {
+    background-color: white;
+  }
+}
+
+/* breakpoint à 480 => en dessous de 480px, on active les styles suivants */
+@media (max-width: 480px) {
+  aside {
+    display: none;
+  }
+
+  #gallery {
+    width: 100%;
+    padding-right: 0;
+    margin-right: -0.625rem;
+  }
+
+  /* 3 images par ligne */
+  #gallery img,
+  #gallery img:first-child {
+    width: calc(100% / 3 - 0.625rem);
+  }
+}
