@@ -1,0 +1,11 @@
+Changelog
+
+ 
+
+2018.12.06 - version 0.2
+ - Fixed - Responsive contact form 
+ - Added screenshot
+ - Added linking back to homepage
+
+ 2018.12.05 - version 0.1
+ - First release
