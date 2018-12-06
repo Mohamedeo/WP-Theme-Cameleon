@@ -190,6 +190,17 @@ footer p {
   text-align: center;
 }
 
+.wpforms-form .wpforms-field-label {
+  display: block;
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+  float: none;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+
 /* Fioritures : le coeur qui bat */
 .heart-beat {
   font-size: 1.2em;
